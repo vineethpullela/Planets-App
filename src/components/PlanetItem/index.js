@@ -1,15 +1,15 @@
-import {PlanetContainer, Image, Name, Description} from './styledComponets'
+import './index.css'
 
 const PlanetItem = props => {
   const {planetDetails} = props
   const {name, imageUrl, description} = planetDetails
 
   return (
-    <PlanetContainer>
-      <Image src={imageUrl} alt={`planet ${name}`} />
-      <Name>{name}</Name>
-      <Description>{description}</Description>
-    </PlanetContainer>
+    <div className="planet-container">
+      <img className="image" src={imageUrl} alt={`planet ${name}`} />
+      <h1 className="name">{name}</h1>
+      <p className="description">{description}</p>
+    </div>
   )
 }
 

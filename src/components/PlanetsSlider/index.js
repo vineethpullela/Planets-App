@@ -2,20 +2,20 @@ import Slider from 'react-slick'
 
 import PlanetItem from '../PlanetItem'
 
-import {PlanetsAppContainer, Heading} from './styleComponents'
+import './index.css'
 
 const PlanetsSlider = props => {
   const {planetsList} = props
 
   return (
-    <PlanetsAppContainer data-testid="planets">
-      <Heading>PLANETS</Heading>
+    <div className="planets-app-container" data-testid="planets">
+      <h1 className="heading">PLANETS</h1>
       <Slider>
-        {planetsList.map(each => (
-          <PlanetItem key={each.id} planetDetails={each} />
+        {planetsList.map(eachPlanet => (
+          <PlanetItem key={eachPlanet.id} planetDetails={eachPlanet} />
         ))}
       </Slider>
-    </PlanetsAppContainer>
+    </div>
   )
 }
 
